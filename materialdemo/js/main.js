@@ -15,6 +15,6 @@ $(document).ready(function() {
 		Materialize.toast('The Ai Regi', 5000);	  
 	};
 	
-	setTimeout(hi,2000);
-	setTimeout(Welcome,5000);
+	setTimeout(hi,4000);
+	setTimeout(Welcome,7000);
 });
