@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<data>
+    <user>
+        <userid>14cs001</userid>
+        <username>Arun</username>
+        <dob>25/10/1996</dob>
+        <mobile>9600281427</mobile>
+    </user>
+    <user>
+        <userid>14cs002</userid>
+        <username>Raju</username>
+        <dob>21/09/1997</dob>
+        <mobile>9570281427</mobile>
+    </user>
+    <user>
+        <userid>14cs003</userid>
+        <username>Sonu</username>
+        <dob>02/10/1990</dob>
+        <mobile>9500581427</mobile>
+    </user>
+     <user>
+        <userid>14cs004</userid>
+        <username>Xamrin</username>
+        <dob>15/10/1995</dob>
+        <mobile>7500281427</mobile>
+    </user>
+        
+
+</data>

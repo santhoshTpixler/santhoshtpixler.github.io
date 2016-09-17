@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>XML Processing</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="heading"><h1 id="head">Internet Programming Laboratory</h1></div>
+        <div class="title"><h2>Exercise 5</h2><hr>
+            <h2 style="text-align:left;">Query User Details</h2></div>
+        
+        
+        <div class="form">
+        
+       <p id="form">User ID:&nbsp;&nbsp;<input id="uid" required type="text" onkeypress="keyPress(event)" name="uid"></p>   
+        
+        
+        <input id="submit" type="submit" onclick="XMLProcess()">
+        </div>
+        
+        <div id="result">
+        
+        </div>
+        <script>
+            function init(fname){
+                var xhttp = new XMLHttpRequest();
+                xhttp.open("GET",fname,false);
+                xhttp.send();
+                return xhttp.responseXML;
+            };
+            
+            function XMLProcess(){
+                var xmldoc = init("data.xml");
+                var result = "";
+                var name,userid,dob,mono;
+                
+                var x = xmldoc.getElementsByTagName("userid");
+                
+                var inputuid = document.getElementById("uid").value;
+                var serachkey = inputuid.toLowerCase();
+                if(inputuid == "")
+                    {
+                       alert("Please Enter User ID!!");
+                        return false;
+                    }
+                
+                for(i = 0; i < x.length; i++)
+                    {
+                        var key = xmldoc.getElementsByTagName("userid")[i].childNodes[0].nodeValue;
+                        if(serachkey == key)
+                            {
+                                name = xmldoc.getElementsByTagName("username")[i].childNodes[0].nodeValue;
+                                userid = key;
+                                dob = xmldoc.getElementsByTagName("dob")[i].childNodes[0].nodeValue;
+                                mono = xmldoc.getElementsByTagName("mobile")[i].childNodes[0].nodeValue;
+                                result = "<h3>User ID: " + userid + "<br>Name: " + name + "<br>DOB : " + dob + "<br>Mobile No: " + mono + "</h3>";
+                                break;
+                            }
+                        else
+                            {
+                                result = "<h3>No records found</h3>";
+                            }
+                        
+                                
+                    }
+                document.getElementById("result").innerHTML = result;
+                document.getElementById("uid").value = "";
+                
+            };
+            function keyPress(e){
+                if(e.which == 13 || e.keyCode == 13)
+                    {
+                        document.getElementById("submit").click();
+                    }
+            };
+            
+        </script>
+        
+    </body>
+
+</html>
