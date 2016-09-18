@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration Form</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="heading"><h1 id="head">Internet Programming Laboratory</h1></div>
+        <div class="title"><a href="../" style="text-decoration:none;"><h2 style="text-align:left;color:deeppink;">Home</h2></a><h2>Exercise 3</h2></div>
+        <h2>Registration Form</h2>
+        <div id="form" class="form">
+        <form>
+       <p>Name:&nbsp;&nbsp;<input id="name"  type="text" name="name"></p>
+            <p> Address:&nbsp;&nbsp;<input id="address" type="text" name="address"></p>
+        <p> Age:&nbsp;&nbsp;<input id="age" type="number" name="age"></p>
+            <p> DOB&nbsp;&nbsp;<input id="dob" type="date" name="dob"></p>
+       
+        </form>
+        <input id="submit" type="submit" onclick="validate()">
+        </div>
+        <div id="show" onclick="revert()">
+            <h2 style="padding:100px;color: green;">Success!!</h2>
+            <h2 style="text-align:center;color:orange" >Click to Register again</h2>
+        </div>
+        <script>
+        function validate(){
+            var age = document.getElementById("age").value;
+            var err = "Error!! ";
+            
+            
+            if( age == "")
+                err+= "Enter age";
+            else
+                {
+                    if(age < 18)
+                    err += "You are less than 18";
+                }
+            if(err != "Error!! ")
+                {
+                    alert(err);        
+                }
+            else{
+                document.getElementById("age").value = "";
+                document.getElementById("name").value = "";
+                document.getElementById("address").value="";
+                document.getElementById("dob").value="";
+                document.getElementById("form").style.display = "none";
+                document.getElementById("show").style.display = "block";
+                
+            }
+            
+        };
+            function revert(){
+              document.getElementById("form").style.display = "block"; 
+                document.getElementById("show").style.display = "none";
+            };
+            
+            
+        
+        </script>
+        
+    </body>
+
+</html>
