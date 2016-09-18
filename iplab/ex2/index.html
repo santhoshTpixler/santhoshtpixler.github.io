@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cascading Style Sheet</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <style>
+            h1{
+                text-align: center;
+            }
+            .modal{
+                display: none;
+                position: fixed;
+                z-index: 1;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                left: 0;
+                top: 0;
+                padding-top: 100px;
+                background-color: rgba(0,0,0,0.9);
+                
+            }
+            .modal-img{
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+                border-radius: 15px;
+                
+            }
+            @keyframes zoom {
+                from {transform:scale(0)} 
+                    to {transform:scale(1)}
+            }
+            .close{
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                font-size: 40px;
+                color: aliceblue;
+                font-weight: bold;
+                
+            }
+            .close:hover,.close:focus{
+                color: aquamarine;
+            }
+        
+        </style>
+    </head>
+    <body>
+        <div class="heading"><h1>Internet Programming Laboratory</h1></div>
+        <div class="title"><a href="../" style="text-decoration:none;"><h2 style="text-align:left;color:deeppink;">Home</h2></a><h2>Exercise 2</h2></div>
+        <div id="modal"  class="modal">
+            <span class="close" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+            <img class="modal-img" id="modal-img">
+        </div>
+        <div class="container">
+            <div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-1.jpg" onclick="dispModal(this)">
+                </div>
+            </div>
+            <div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-2.jpg" onclick="dispModal(this)">
+                </div>
+            </div>
+            <div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-3.jpg" onclick="dispModal(this)">
+                </div>
+            </div>
+            <div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-4.jpg" onclick="dispModal(this)">
+                </div>
+            </div>
+            <div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-5.jpg" onclick="dispModal(this)">
+                </div>
+            </div>
+            <div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-6.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-7.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-8.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-9.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-10.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-11.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-12.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-13.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-14.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-15.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-16.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-17.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-18.jpg" onclick="dispModal(this)">
+                </div>
+            </div><div class="ImgBox">
+                <div class="InnerImg">
+                <img src="img/img-19.jpg" onclick="dispModal(this)">
+                </div>
+            </div>
+            
+        </div>
+        <script>
+            
+            function dispModal(e){
+                var model = document.getElementById("modal");
+                var modalImg = document.getElementById("modal-img");
+                model.style.display = "block";
+                modalImg.src = e.src;
+                
+            };
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,79 @@
+body{
+    font-family: sans-serif;
+    align-content: center;
+    margin: 10px;
+    padding: 10px;
+
+}
+
+.heading{
+    padding: 5px;
+    text-align: center;
+    color: coral !important;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border-style: solid;
+   
+}
+
+.title{
+    margin: 10px;
+    font-size: 15px;
+    text-align: right;
+    padding-right: 70px;
+    color: brown;
+    border-left: 15px;
+    border-left-style: groove;
+    border-left-color: darkgoldenrod;
+    background-color: cornsilk;
+}
+.ImgBox{
+    width: 20%;
+    padding-bottom: 20%;
+    position: relative;
+    float: left;
+    margin: 10px;
+   
+}
+.InnerImg{
+    position: absolute;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+.container{
+    overflow: hidden;
+    
+}
+.InnerImg img{
+    width: 100%;
+}
+
+@media only screen and (max-width : 480px) {
+   /* Smartphone view: 1 tile */
+   .ImgBox {
+      width: 100%;
+      padding-bottom: 100%;
+   }
+}
+@media only screen and (max-width : 650px) and (min-width : 481px) {
+   /* Tablet view: 2 tiles */
+   .ImgBox {
+      width: 50%;
+      padding-bottom: 50%;
+   }
+}
+@media only screen and (max-width : 1050px) and (min-width : 651px) {
+   /* Small desktop / ipad view: 3 tiles */
+   .ImgBox {
+      width: 33.3%;
+      padding-bottom: 33.3%;
+   }
+}
+@media only screen and (max-width : 1290px) and (min-width : 1051px) {
+   /* Medium desktop: 4 tiles */
+   .ImgBox {
+      width: 25%;
+      padding-bottom: 25%;
+   }
+}
