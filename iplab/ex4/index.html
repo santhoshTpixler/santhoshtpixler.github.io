@@ -8,35 +8,9 @@
     <body>
         <div onmouseover="mouseOv()" onmouseout="mouseOut()" onmousedown="mousedown()" onmouseup="mouseup()" class="heading"><h1 id="head">Internet Programming Laboratory</h1></div>
         <div class="title"><a href="../" style="text-decoration:none;"><h2 style="text-align:left;color:deeppink;">Home</h2></a><h2>Exercise 4</h2></div>
-        <h2>Registration Form</h2>
-        <div class="form">
-        <form>
-       <p>Name:&nbsp;&nbsp;<input id="name" type="text" name="name"></p>
-            <p> Address:&nbsp;&nbsp;<input id="address" type="text" name="address"></p>
-        <p> Age:&nbsp;&nbsp;<input id="age" type="number" name="age"></p>
-            <p> DOB&nbsp;&nbsp;<input type="date" name="dob"></p>
-       
-        </form>
-        <input id="submit" type="submit" onclick="validate()">
-        </div>
+        
         <script>
-        function validate(){
-            var age = document.getElementById("age").value;
-            var name = document.getElementById("name").value;
-            var address = document.getElementById("address").value;
-            var err = "Error!! ";
-            
-            
-            if( age == "")
-                err+= "Enter age";
-            else
-                {
-                    if(age < 18)
-                    err += "You are less than 18";
-                }
-            if(err != "Error!! ")
-            alert(err);
-        };
+       
             function mouseOv(){
                 document.getElementById("head").innerHTML = "Mouse on me!!";
             };
