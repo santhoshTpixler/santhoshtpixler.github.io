@@ -1,0 +1,47 @@
+body{
+    font-family: sans-serif;
+    padding: 5px;
+    align-content: center;
+
+}
+
+.heading{
+    padding: 5px;
+    text-align: center;
+    color: coral !important;
+    background-color: aliceblue;
+    border-radius: 10px;
+    border-style: solid;
+   
+}
+
+.title{
+    margin: 10px;
+    font-size: 15px;
+    text-align: right;
+    padding-right: 70px;
+    color: brown;
+    border-left: 15px;
+    border-left-style: groove;
+    border-left-color: darkgoldenrod;
+    background-color: cornsilk;
+}
+input{
+    border-color: coral;
+    border-radius: 15px;
+    background-color: bisque;
+    float: right;
+  
+}
+
+form p{
+    font-family: monospace;
+    font-size: 20px;
+    font-style: italic;
+    
+    
+    }
+.form{
+    align-content: center;
+    margin:20%
+}
